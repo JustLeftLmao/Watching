@@ -1,27 +1,5 @@
 <html>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <video id="video" controls></video>
-    <script>
-    if(Hls.isSupported())
-    {
-        var video = document.getElementById('video');
-        var hls = new Hls();
-        hls.loadSource('playlist.m3u8');
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED,function()
-        {
-            video.play();
-        });
-    }
-    else if (video.canPlayType('application/vnd.apple.mpegurl'))
-    {
-        video.src = 'playlist.m3u8';
-        video.addEventListener('canplay',function()
-        {
-            video.play();
-        });
-    }
-    </script>
-  </body>
-</html>
+    <video id="video" src="blob:https://sorachill.vercel.app/6656229d-5cca-46a7-889e-0290dd184dfe"></video>
+    
